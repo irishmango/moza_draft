@@ -23,7 +23,7 @@ class TopicCard extends StatelessWidget {
             color: color,
             borderRadius: BorderRadius.circular(28),
             boxShadow: [BoxShadow(
-              color: Colors.black.withValues(alpha: 0.5),
+              color: Colors.black.withValues(alpha: 0.4),
               offset: Offset(0, 4),
               spreadRadius: 0,
               blurRadius: 4,

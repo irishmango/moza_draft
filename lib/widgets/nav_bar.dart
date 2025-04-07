@@ -15,7 +15,7 @@ class NavBar extends StatelessWidget {
             height: 56,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-            color: Color(0xFFFFFFFF).withValues(alpha: 0.75),
+            color: Color(0xFFFFFFFF).withValues(alpha: .85),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
