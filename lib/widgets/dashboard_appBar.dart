@@ -21,7 +21,7 @@ class DashboardAppbar extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text("WELCOME BACK!", style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600),),
-              Text("Johannes S.", style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
+              Text("Shokri Francis", style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
             ],
           ),
           SizedBox(width: 12),

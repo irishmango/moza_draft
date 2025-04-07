@@ -44,7 +44,7 @@ class TopicsScreen extends StatelessWidget {
                       crossAxisSpacing: 2,
                       mainAxisSpacing: 2,
                       padding: EdgeInsets.fromLTRB(8, 0, 8, 8),
-                      shrinkWrap: true, // make the grid take only as much height as needed
+                      shrinkWrap: true, // makes the grid take only as much height as needed
                       physics: NeverScrollableScrollPhysics(), 
                       children: [
                         TopicCard(title: "Cadences", color: Color(0xFFE5EDFF)),

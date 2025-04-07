@@ -69,9 +69,10 @@ class TopicsGrid extends StatelessWidget {
                   TopicCard(title: "Ear Training", color: const Color.fromARGB(255, 200, 177, 146)),
                   TopicCard(title: "Chords", color: Colors.teal),
                   TopicCard(title: "Music 101", color: Colors.deepPurple),
-                  // SizedBox(height: 8,)
+                  
                 ],
-              )
+              ),
+              SizedBox(height: 60,)
             ],
           ),
         ),

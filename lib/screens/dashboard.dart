@@ -39,6 +39,8 @@ class DashboardScreen extends StatelessWidget {
             right: 0,
             child: NavBar(),
           ),
+          const Positioned(child: 
+          SizedBox(height: 8,))
         ],
       ),
     );
