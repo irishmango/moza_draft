@@ -5,6 +5,7 @@ import 'package:moza_draft/dashboard_appBar.dart';
 import 'package:moza_draft/learn_path_card.dart';
 import 'package:moza_draft/nav_bar.dart';
 import 'package:moza_draft/screens/dashboard.dart';
+import 'package:moza_draft/screens/topics_screen.dart';
 import 'package:moza_draft/topic_card.dart';
 import 'package:moza_draft/topics_grid.dart';
 
@@ -18,7 +19,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DashboardScreen()
+      home: TopicsScreen()
     );
   }
 }
