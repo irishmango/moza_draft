@@ -25,7 +25,7 @@ class LearnPathCard extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0), // Global padding inside the card
+        padding: const EdgeInsets.all(16.0), // Main padding in the card
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -60,7 +60,7 @@ class LearnPathCard extends StatelessWidget {
               ],
             ),
 
-            const Spacer(), // Pushes content to the bottom
+            const Spacer(), 
 
             // Inner Info Row
             Container(
@@ -96,7 +96,7 @@ class LearnPathCard extends StatelessWidget {
                     ),
                   ),
 
-                  // Placeholder icon(ask a Tut for help with progress?)
+                  // Placeholder icon(ask a Tut for help with progress icon?)
                   Container(
                     width: 44,
                     height: 44,

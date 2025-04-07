@@ -24,7 +24,7 @@ class NavBar extends StatelessWidget {
                 ),
                 Icon(Icons.bookmark, color: Colors.black,
                 ),
-                Icon(Icons.anchor, color: Colors.black, // placeholder anchor
+                Icon(Icons.anchor, color: Colors.black, // placeholder anchor icon
                 ),
                 Icon(Icons.person_2_rounded, color: Colors.black,
                 ),

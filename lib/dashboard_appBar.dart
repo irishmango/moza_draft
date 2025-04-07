@@ -32,7 +32,7 @@ class DashboardAppbar extends StatelessWidget {
               borderRadius: BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(5), bottomLeft: Radius.circular(5), bottomRight: Radius.circular(16)),
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
-                end: Alignment.centerRight, // default direction
+                end: Alignment.centerRight, 
                 stops: [0.5, 1],
                 colors: [Color(0xFFFF6B1B), Color(0xFFFFE649)])
             ),
