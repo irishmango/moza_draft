@@ -49,14 +49,14 @@ class TopicsGrid extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 8,),
-                //start of grid
+                //start of topics grid
                 GridView.count(
                   crossAxisCount: 2,
                   crossAxisSpacing: 2,
                   mainAxisSpacing: 2,
                   padding: EdgeInsets.fromLTRB(8, 0, 8, 8),
-                  shrinkWrap: true, // make grid take only as much height as needed
-                  physics: NeverScrollableScrollPhysics(), // disable inner scrolling
+                  shrinkWrap: true, // make the grid take only as much height as needed
+                  physics: NeverScrollableScrollPhysics(), 
                   children: [
                     TopicCard(title: "Cadences", color: Color(0xFFE5EDFF)),
                     TopicCard(title: "Ear Training", color: Color(0xFFF8765D)),

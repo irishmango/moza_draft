@@ -27,12 +27,12 @@ class DashboardScreen extends StatelessWidget {
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 25, sigmaY: 25),
               child: Container(
-                color: Colors.white.withValues(alpha: 0.05), // fixed alpha method
+                color: Colors.white.withValues(alpha: 0.05), 
               ),
             ),
           ),
 
-          // Foreground content
+          // Foreground
           Padding(
             padding: const EdgeInsets.only(top: 42, left: 8, right: 8),
             child: Column(
