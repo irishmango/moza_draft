@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moza_draft/widgets/open_card_button.dart';
 
 class LearnPathCard extends StatelessWidget {
   const LearnPathCard({super.key});
@@ -6,7 +7,9 @@ class LearnPathCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 342,
+
+      // Container Style 
+      width: double.infinity,
       height: 194,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
@@ -24,8 +27,11 @@ class LearnPathCard extends StatelessWidget {
           colors: [Color(0xFF58B270), Color.fromARGB(255, 126, 213, 149)],
         ),
       ),
+
+      // Main padding in the card
       child: Padding(
-        padding: const EdgeInsets.all(16.0), // Main padding in the card
+        padding: const EdgeInsets.all(16.0), 
+        
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -41,25 +47,12 @@ class LearnPathCard extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                Container(
-                  width: 44,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: const Color(0xFF317C43),
-                  ),
-                  child: Center(
-                    child: IconButton(onPressed: () {}, 
-                    icon: Icon(
-                      Icons.arrow_outward,
-                      color: Colors.white,
-                    ),)
-                    
-                  ),
-                )
+                // Button
+                OpenCardButton(color: Color(0xFF317C43),)
               ],
             ),
 
+              
             const Spacer(), 
 
             // Inner Info Row
@@ -83,7 +76,7 @@ class LearnPathCard extends StatelessWidget {
                             fontSize: 14,
                           ),
                         ),
-
+                    
                         Text(
                           "Harmony & Chord Theory",
                           style: TextStyle(
@@ -117,3 +110,4 @@ class LearnPathCard extends StatelessWidget {
     );
   }
 }
+

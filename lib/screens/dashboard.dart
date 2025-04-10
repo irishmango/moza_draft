@@ -1,10 +1,10 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:moza_draft/widgets/dashboard_appBar.dart';
-import 'package:moza_draft/widgets/learn_path_card.dart';
+import 'package:moza_draft/widgets/dashboard_widgets/dashboard_app_bar.dart';
+import 'package:moza_draft/widgets/dashboard_widgets/gym_time_widget.dart';
+import 'package:moza_draft/widgets/dashboard_widgets/learn_path_card.dart';
 import 'package:moza_draft/widgets/menu_background.dart';
 import 'package:moza_draft/widgets/nav_bar.dart';
-import 'package:moza_draft/widgets/topics_grid.dart';
+import 'package:moza_draft/widgets/topics_widgets/topics_grid.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -20,13 +20,33 @@ class DashboardScreen extends StatelessWidget {
 
           // Foreground
           Padding(
-            padding: const EdgeInsets.only(top: 42, left: 8, right: 8),
+            padding: const EdgeInsets.symmetric(vertical: 42, horizontal: 20),
             child: SingleChildScrollView(
               child: Column(
                 children: const [
                   DashboardAppbar(),
-                  LearnPathCard(),
-                  TopicsGrid(),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(12, 0, 12, 12),
+                    child: Column(
+                      children: [
+                        LearnPathCard(),
+                        SizedBox(height: 12,),
+                        TopicsGrid(limit: 4),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text('Improvement Area',
+                            style: TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                                          ),),
+                        ),
+                        SizedBox(height: 8,),
+                        GymTimeWidget(),
+                        SizedBox(height: 65,)
+                      ],
+                    ),
+                  )
+                  
                 ],
               ),
             ),
@@ -40,7 +60,7 @@ class DashboardScreen extends StatelessWidget {
             child: NavBar(),
           ),
           const Positioned(child: 
-          SizedBox(height: 8,))
+          SizedBox(height: 8))
         ],
       ),
     );

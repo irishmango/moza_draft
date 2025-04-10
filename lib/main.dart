@@ -1,16 +1,20 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:moza_draft/widgets/dashboard_appBar.dart';
-import 'package:moza_draft/widgets/learn_path_card.dart';
-import 'package:moza_draft/widgets/nav_bar.dart';
+import 'package:moza_draft/sandbox.dart';
+import 'package:moza_draft/screens/chapters_screen.dart';
 import 'package:moza_draft/screens/dashboard.dart';
-import 'package:moza_draft/screens/topics_screen.dart';
-import 'package:moza_draft/widgets/topic_card.dart';
-import 'package:moza_draft/widgets/topics_grid.dart';
+import 'package:moza_draft/screens/lesson_screen.dart';
+import 'package:moza_draft/screens/quiz_wheel_screen.dart';
+import 'package:moza_draft/screens/topic_details_screen.dart';
+import 'package:moza_draft/screens/topics_all.dart';
+import 'package:moza_draft/theme.dart';
+import 'package:moza_draft/widgets/topics_widgets/chapter_card.dart';
 
 void main() {
-  runApp(const Home());
+  runApp(MaterialApp(
+    theme: primaryTheme,
+    home: Home(),
+  ));
 }
 
 class Home extends StatelessWidget {
@@ -20,8 +24,16 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: 
-      // DashboardScreen()
-      TopicsScreen()
+      DashboardScreen()
+      // TopicsScreen()
+      // TopicDetails()
+      // Center(child: ChapterCard())
+      // ChaptersScreen()
+      // LessonScreen()
+      // QuizWheelScreen()
+      // Sandbox()
+      
+      
       
     );
   }
