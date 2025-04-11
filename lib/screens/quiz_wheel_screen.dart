@@ -49,7 +49,7 @@ class _QuizWheelScreenState extends State<QuizWheelScreen> {
             padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
             child: Column(
               children: [
-                PageTitleNav(title: ""),
+                PageTitleNav(title: "", leftIcon: Icon(Icons.chevron_left, size: 36,),),
                 const SizedBox(height: 80),
                 const Text(
                   "Spin to Learn!",

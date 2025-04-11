@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moza_draft/widgets/header_expand.dart';
 import 'package:moza_draft/widgets/topics_widgets/topic_card.dart';
 
 class TopicsGrid extends StatelessWidget {
@@ -28,34 +29,7 @@ class TopicsGrid extends StatelessWidget {
     return Column(
       children: [
         // heading
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text('Topics to Learn',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),),
-            Expanded(child: SizedBox()),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text('See all',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green,
-                  ),),
-                  SizedBox(width: 8,),
-                  Icon(
-                    Icons.arrow_outward,
-                    color: Colors.green,
-                    size: 32,
-                  )
-              ],
-            ),
-          ],
-        ),
+        
         SizedBox(height: 4,),
         
         //start of topics grid

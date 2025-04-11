@@ -1,34 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:moza_draft/screens/lesson_screen.dart';
-import 'package:moza_draft/screens/topic_details_screen.dart';
-import 'package:moza_draft/screens/topics_all.dart';
-import 'package:moza_draft/theme.dart';
-import 'package:moza_draft/widgets/dashboard_widgets/dashboard_app_bar.dart';
-import 'package:moza_draft/widgets/dashboard_widgets/gym_time_widget.dart';
-import 'package:moza_draft/widgets/dashboard_widgets/learn_path_card.dart';
-import 'package:moza_draft/widgets/fortune_spinner.dart';
-import 'package:moza_draft/widgets/header_expand.dart';
-import 'package:moza_draft/widgets/topics_widgets/chapter_card.dart';
-import 'package:moza_draft/widgets/topics_widgets/topic_card.dart';
-import 'package:moza_draft/widgets/topics_widgets/topic_main_card.dart';
-import 'package:moza_draft/widgets/topics_widgets/topics_grid.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moza_draft/theme.dart';
 
-class Sandbox extends StatelessWidget {
-  const Sandbox({super.key});
+class LoginCard extends StatelessWidget {
+  const LoginCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: Container(
-                decoration: BoxDecoration(border: Border.all()),
-                child: Column(
+    return Column(
                   children: [
                     Stack(
                       children: [
@@ -37,8 +16,39 @@ class Sandbox extends StatelessWidget {
                           height: 230,
                           decoration: BoxDecoration(
                             color: AppColors.appBlue,
-                            borderRadius: BorderRadius.only(topLeft: Radius.circular(24), bottomRight: Radius.circular(24))
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(24), bottomRight: Radius.circular(24)),
+                            boxShadow: [BoxShadow(
+                                          color: Color(0x19000000),
+                                          blurRadius: 22,
+                                          offset: Offset(0, 10),
+                                          spreadRadius: 0,
+                                          ),
+                                          BoxShadow(
+                                          color: Color(0x16000000),
+                                          blurRadius: 40,
+                                          offset: Offset(0, 40),
+                                          spreadRadius: 0,
+                                          ),
+                                          BoxShadow(
+                                          color: Color(0x0C000000),
+                                          blurRadius: 55,
+                                          offset: Offset(0, 91),
+                                          spreadRadius: 0,
+                                          ),
+                                          BoxShadow(
+                                          color: Color(0x02000000),
+                                          blurRadius: 65,
+                                          offset: Offset(0, 162),
+                                          spreadRadius: 0,
+                                          ),
+                                          BoxShadow(
+                                          color: Color(0x00000000),
+                                          blurRadius: 71,
+                                          offset: Offset(0, 253),
+                                          spreadRadius: 0,
+                                          )]
                                         ),
+                          
                                       ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -90,7 +100,7 @@ class Sandbox extends StatelessWidget {
                         )
                       ]
                     ),
-                    SizedBox(height: 12,),
+                    SizedBox(height: 25),
                     Center(child: 
                     Container(
                       width: 190,
@@ -103,31 +113,7 @@ class Sandbox extends StatelessWidget {
                     onPressed: () {}, 
                     child: Text("Sign In", style: TextStyle(color: AppColors.appWhite, fontSize: 20, fontWeight: FontWeight.bold),)))),
                   ],
-                )
-              )
-            ),
-          ],
-        ),
-      ),
-    );
+                
+              );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)

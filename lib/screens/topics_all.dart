@@ -22,7 +22,7 @@ class TopicsScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
               child: Column(
                 children: [
-                  PageTitleNav(title: "Topics To Learn"),
+                  PageTitleNav(title: "Topics To Learn", leftIcon: Icon(Icons.chevron_left, size: 36,),),
                   SizedBox(height: 8,),
                       //start of topics grid
                       GridView.count(

@@ -22,7 +22,7 @@ class ChaptersScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
               child: Column(
                 children: [
-                  PageTitleNav(title: "Topics Chapters"),
+                  PageTitleNav(title: "Topics Chapters", leftIcon: Icon(Icons.chevron_left, size: 36,),),
                   SizedBox(height: 8,),
                   Column(
                     spacing: 8,

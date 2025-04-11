@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class AppColors {
@@ -28,7 +29,7 @@ ThemeData primaryTheme = ThemeData(
   scaffoldBackgroundColor: AppColors.appWhite,
 
   // Text Theme
-  textTheme: TextTheme(
+  textTheme: GoogleFonts.nunitoTextTheme().copyWith(
     bodySmall: TextStyle(
       color: AppColors.textColor,
       fontSize: 14,

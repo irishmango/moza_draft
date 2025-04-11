@@ -27,7 +27,7 @@ class LessonScreen extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(20, 60, 20, 0),
                   child: Column(
                     children: [
-                      PageTitleNav(title: "Lessons",),
+                      PageTitleNav(title: "Lessons", leftIcon: Icon(Icons.chevron_left, size: 36,),),
                       const SizedBox(height: 16),
                       const LessonMainCard(),
                       SizedBox(height: 20,),
@@ -115,7 +115,7 @@ class LessonScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Column(
                       children: [
-                        HeaderExpand(title: "Extra Lessons",),
+                        HeaderExpand(title: "Extra Lessons"),
                       ],
                     ),
                   )

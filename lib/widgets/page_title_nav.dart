@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-
 class PageTitleNav extends StatelessWidget {
-
   final String title;
+  final Widget? leftIcon;
+  final Widget? rightIcon;
 
   const PageTitleNav({
     required this.title,
+    this.leftIcon,
+    this.rightIcon,
     super.key,
   });
 
@@ -14,26 +16,31 @@ class PageTitleNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
         SizedBox(
           width: double.infinity,
           child: Stack(
             alignment: Alignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                 child: Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              const Positioned(
-                left: 0,
-                child: Icon(Icons.chevron_left, size: 36),
-              ),
+              if (leftIcon != null)
+                Positioned(
+                  left: 0,
+                  child: leftIcon!,
+                ),
+              if (rightIcon != null)
+                Positioned(
+                  right: 0,
+                  child: rightIcon!,
+                ),
             ],
           ),
         ),

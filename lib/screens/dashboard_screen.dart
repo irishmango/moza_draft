@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:moza_draft/screens/topic_details_screen.dart';
+import 'package:moza_draft/screens/topics_all.dart';
 import 'package:moza_draft/widgets/dashboard_widgets/dashboard_app_bar.dart';
 import 'package:moza_draft/widgets/dashboard_widgets/gym_time_widget.dart';
 import 'package:moza_draft/widgets/dashboard_widgets/learn_path_card.dart';
+import 'package:moza_draft/widgets/header_expand.dart';
 import 'package:moza_draft/widgets/menu_background.dart';
 import 'package:moza_draft/widgets/nav_bar.dart';
 import 'package:moza_draft/widgets/topics_widgets/topics_grid.dart';
@@ -31,6 +34,7 @@ class DashboardScreen extends StatelessWidget {
                       children: [
                         LearnPathCard(),
                         SizedBox(height: 12,),
+                        HeaderExpand(title: "Topics to Learn",),
                         TopicsGrid(limit: 4),
                         Align(
                           alignment: Alignment.centerLeft,

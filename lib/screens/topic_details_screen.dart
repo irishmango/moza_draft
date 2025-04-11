@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:moza_draft/screens/chapters_screen.dart';
 import 'package:moza_draft/widgets/header_expand.dart';
+import 'package:moza_draft/widgets/page_title_nav.dart';
 import 'package:moza_draft/widgets/topics_widgets/chapter_card.dart';
 import 'package:moza_draft/widgets/menu_background.dart';
 import 'package:moza_draft/widgets/topics_widgets/topic_main_card.dart';
@@ -23,27 +25,7 @@ class TopicDetails extends StatelessWidget {
               child: Column(
                 children: [
                   // Nav Bar
-                  SizedBox(
-                        width: double.infinity,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Positioned(
-                              child: Padding(
-                              padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-                              child: Text('Topics Details',
-                                style: TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold,
-                              ),),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            child: Icon(Icons.chevron_left, size: 36)),
-                          ]
-                        ),
-                      ),
+                  PageTitleNav(title: "Topic Details", leftIcon: Icon(Icons.chevron_left, size: 36,)),
                       // Top Card
                        TopicMainCard(),
                        SizedBox(height: 16 ,),
