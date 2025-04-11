@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: 
-      DashboardScreen()
+      // DashboardScreen()
       // TopicsScreen()
       // TopicDetails()
       // Center(child: ChapterCard())

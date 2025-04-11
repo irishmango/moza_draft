@@ -37,7 +37,7 @@ class TopicsScreen extends StatelessWidget {
                           TopicCard(title: "Ear Training", color: Color(0xFFF8765D)),
                           TopicCard(title: "Chords", color: Color(0xFFF9AC4F)),
                           TopicCard(title: "Music 101", color: Color(0xFF3C79D0)),
-                          TopicCard(title: "Cadences", color: Color(0xFF5CB573)),
+                          TopicCard(title: "Bach Chorales", color: Color(0xFF5CB573)),
                           TopicCard(title: "Ear Training", color: const Color.fromARGB(255, 200, 177, 146)),
                           TopicCard(title: "Chords", color: Colors.teal),
                           TopicCard(title: "Music 101", color: Colors.deepPurple),

@@ -50,18 +50,11 @@ class ChapterCard extends StatelessWidget {
             // Title Row
             Row(
               children: [
-                 Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-                const Spacer(),
+                Expanded(child: Text(title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black))),
                 OpenCardButton(color: buttonColor),
               ],
             ),
+            
             SizedBox(height: 8,),
             Text(duration, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: AppColors.textColor)),
             Text(lessonAmount, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: AppColors.textColor,)),

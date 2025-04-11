@@ -1,52 +1,88 @@
-
+import 'dart:async';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:moza_draft/theme.dart';
 import 'package:moza_draft/widgets/menu_background.dart';
 import 'package:moza_draft/widgets/page_title_nav.dart';
+import 'package:moza_draft/widgets/fortune_spinner.dart';
 
-class QuizWheelScreen extends StatelessWidget {
+class QuizWheelScreen extends StatefulWidget {
   const QuizWheelScreen({super.key});
+
+  @override
+  State<QuizWheelScreen> createState() => _QuizWheelScreenState();
+}
+
+class _QuizWheelScreenState extends State<QuizWheelScreen> {
+  final StreamController<int> controller = StreamController<int>();
+  final _random = Random();
+
+  final List<String> topics = [
+    "Cadences",
+    "Chords",
+    "Scales",
+    "Music 101",
+    "Analysis",
+    "Modulation",
+    "Intervals"
+  ];
+
+  void spinWheel() {
+    final selectedIndex = _random.nextInt(topics.length);
+    controller.add(selectedIndex);
+  }
+
+  @override
+  void dispose() {
+    controller.close();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, 
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
-          // Background
-          MenuBackground(),
-
-          // Foreground
-          SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
-              child: Column(
-                children: [
-                  PageTitleNav(title: ""),
-                  SizedBox(height: 150,),
-                  Text("Spin to Learn!", 
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold
-                  ),),
-                  SizedBox(height: 12,),
-                  Container(
-                    height: 40,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: AppColors.appOrange
+          const MenuBackground(),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
+            child: Column(
+              children: [
+                PageTitleNav(title: ""),
+                const SizedBox(height: 80),
+                const Text(
+                  "Spin to Learn!",
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 12),
+                SizedBox(
+                  height: 48,
+                  width: 120,
+                  child: FilledButton(
+                    style: FilledButton.styleFrom(
+                      backgroundColor: AppColors.appOrange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
-                    child: FilledButton(
-                      onPressed: () {}, 
-                      child: Text("Spin", style: TextStyle(fontSize: 20),))),
-
-                  
-                    ],
-              ),
-            )
-      )],
+                    onPressed: spinWheel,
+                    child: const Text(
+                      "Spin",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+                Expanded(child: SizedBox()),
+                FortuneSpinner(
+                  selectedIndexStream: controller.stream,
+                ),
+                
+              ],
             ),
+          ),
+        ],
+      ),
     );
-      }
+  }
 }

@@ -35,13 +35,15 @@ class TopicMainCard extends StatelessWidget {
             // Title Row
             Row(
               children: [
-                const Text(
-                  "Harmony &\nChord Theory",
-                  style: TextStyle(
-                    height: 1,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                Expanded(
+                  child: const Text(
+                    "Harmony & Chord Theory",
+                    style: TextStyle(
+                      height: 1,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moza_draft/widgets/header_expand.dart';
 import 'package:moza_draft/widgets/topics_widgets/chapter_card.dart';
 import 'package:moza_draft/widgets/menu_background.dart';
 import 'package:moza_draft/widgets/topics_widgets/topic_main_card.dart';
@@ -48,34 +49,7 @@ class TopicDetails extends StatelessWidget {
                        SizedBox(height: 16 ,),
             
                        // Start of Chapters section
-                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text('Chapters',
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),),
-                          Expanded(child: SizedBox()),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text('See all',
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green,
-                                ),),
-                                SizedBox(width: 8,),
-                                Icon(
-                                  Icons.arrow_outward,
-                                  color: Colors.green,
-                                  size: 28,
-                                )
-                            ],
-                          ),
-                        ],
-                      ),
+                      HeaderExpand(title: "Chapters",),
                       SizedBox(height: 8,),
                       SizedBox(
                         height: 600,
@@ -108,3 +82,4 @@ class TopicDetails extends StatelessWidget {
     
   }
 }
+
