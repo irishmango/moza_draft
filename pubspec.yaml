@@ -68,6 +68,8 @@ flutter:
   - assets/img/moza_logo_white.png
   - assets/img/gym_logo.png
   - assets/img/login_background.png
+  - assets/img/orange_wave_bg.png
+  - assets/img/chord_example_1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
